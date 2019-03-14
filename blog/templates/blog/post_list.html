@@ -4,6 +4,7 @@
     </head>
     <body>
         <div>
+                <p>published 10.03.2019, 14:30</p>
             <h1><a href="https://youtu.be/AygbYntMzrc">Fav episodes of those lovely Muppets</a></h1>
         </div>
         <div>
@@ -16,5 +17,12 @@
             <h1><a href="https://www.youtube.com/watch?v=GlRhJXSLXFs">Elmo</a></h1>
             <p>A furry 3-year-old red monster</p>
         </div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
     </body>
 </html>
